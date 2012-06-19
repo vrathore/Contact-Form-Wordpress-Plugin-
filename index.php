@@ -3,7 +3,7 @@
 Plugin Name: Contact Form
 Plugin URI: 
 Description: A general contact form with add fields and a shortcode to be used on page or post. The fields type can be text,text area,radio buttom,dropdown,password. The form can also be used as a widget. Also, to enhance the contact form usability, a security code feature(captcha) is also added and all the form details can be viewed at the admin side.
-Version: 1.1
+Version: 1.1.2
 Author: Varsha Rathore
 Author URI: http://www.avika.in
 */
@@ -187,6 +187,7 @@ function CF_add_to_menu() {
 	add_menu_page('Contact Form', 'Contact Form', 'manage_options', 'my-top-level-handle', 'contact_admin');
 	add_options_page('Contact Form', '', 'manage_options', "Contact_Form/add_fields.php",'' );
 	add_options_page('Contact Form', '', 'manage_options', "Contact_Form/delete_fields.php",'' );
+	add_options_page('Contact Form', '', 'manage_options', "Contact_Form/update_fields.php",'' );
 	
 }
 

@@ -25,7 +25,10 @@
 		{
 			echo "<div id='message' class='updated below-h2'>Field has been deleted successfully</div>";
 		}
-		
+		if($get_value == updt)
+		{
+			echo "<div id='message' class='updated below-h2'>Field has been updated successfully</div>";
+		}
 		
 		/* Update the option table when the admin form is submitted*/
 		if (@$_POST['CF_submit']) 
@@ -102,7 +105,7 @@
 						<td><?php echo $result->id; ?></td>
 						<td><?php echo $result->fieldname; ?>
 						<div class="row-actions">
-							<!--<span class="mark"><a href="options-general.php?page=Contact_Form/update_fields.php&val=<?php //echo $result->id; ?>">Update</a> | </span>-->
+							<span class="mark"><a href="options-general.php?page=Contact_Form/update_fields.php&val=<?php echo $result->id; ?>">Update</a> | </span>
 							<span class="delete"><a href="options-general.php?page=Contact_Form/delete_fields.php&val=<?php echo $result->id; ?>" onclick="return confirm('This will delete all the data available in this field. \n\nDo you want to delete?')" >Delete</a></span>
 						</div>
 						</td>
