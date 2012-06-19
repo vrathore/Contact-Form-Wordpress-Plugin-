@@ -186,6 +186,7 @@ function contact_admin() {
 function CF_add_to_menu() {
 	add_menu_page('Contact Form', 'Contact Form', 'manage_options', 'my-top-level-handle', 'contact_admin');
 	add_options_page('Contact Form', '', 'manage_options', "Contact_Form/add_fields.php",'' );
+	add_options_page('Contact Form', '', 'manage_options', "Contact_Form/delete_fields.php",'' );
 	
 }
 

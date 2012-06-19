@@ -21,6 +21,10 @@
 		{
 			echo "<div id='message' class='updated below-h2'>New field has been added successfully</div>";
 		}
+		if($get_value == del)
+		{
+			echo "<div id='message' class='updated below-h2'>Field has been deleted successfully</div>";
+		}
 		
 		
 		/* Update the option table when the admin form is submitted*/
@@ -38,13 +42,6 @@
 			update_option('CF_On_MyEmail', $CF_On_MyEmail );
 			update_option('CF_On_MySubject', $CF_On_MySubject );
 			update_option('CF_On_Captcha', $CF_On_Captcha );
-								
-			/*
-			update_option('CF_On_Name', $CF_On_Name );
-			update_option('CF_On_Email', $CF_On_Email );
-			update_option('CF_On_Message', $CF_On_Message );
-			update_option('CF_On_Subject', $CF_On_Subject );
-			*/
 			
 		}
 		?>
@@ -103,7 +100,12 @@
 					foreach ( $key as $result ){?>
 					<tbody>
 						<td><?php echo $result->id; ?></td>
-						<td><?php echo $result->fieldname; ?></td>
+						<td><?php echo $result->fieldname; ?>
+						<div class="row-actions">
+							<!--<span class="mark"><a href="options-general.php?page=Contact_Form/update_fields.php&val=<?php //echo $result->id; ?>">Update</a> | </span>-->
+							<span class="delete"><a href="options-general.php?page=Contact_Form/delete_fields.php&val=<?php echo $result->id; ?>" onclick="return confirm('This will delete all the data available in this field. \n\nDo you want to delete?')" >Delete</a></span>
+						</div>
+						</td>
 						<td><?php echo $result->required; ?></td>
 						<td><?php echo $result->type; ?></td>
 						<td><?php echo $result->values; ?></td>

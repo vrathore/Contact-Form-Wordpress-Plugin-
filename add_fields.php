@@ -151,10 +151,6 @@
 							<option value="number">Number</option>
 							<option value="email">Email</option>
 						</select>
-<!--						<input type="radio" name="CF_new_validation" id="CF_new_validation" value="text">text
-						<input type="radio" name="CF_new_validation" id="CF_new_validation" value="number">number
-						<input type="radio" name="CF_new_validation" id="CF_new_validation" value="email">email
--->
 					</td>
 				</tr>				
 				<tr>
